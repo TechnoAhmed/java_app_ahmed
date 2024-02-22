@@ -3,8 +3,9 @@ pipeline{
     stages{
         stage('Git Checkout'){
             steps{
-                script{
-                    git branch: 'main', url: 'https://github.com/TechnoAhmed/java_app_ahmed.git'
+                gitCheckout{
+                    branch: "main",
+                    url: "https://github.com/TechnoAhmed/java_app_ahmed.git"
                 }
             }
         }
